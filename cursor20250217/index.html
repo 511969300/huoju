@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - AI助手</title>
+    
+    <!-- 引入字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- 引入轮播图库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">火炬</div>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#about">关于</a>
+            <a href="#portfolio">作品集</a>
+            <a href="#ai-assistant" class="ai-btn">AI助手</a>
+            <a href="#contact">联系</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>你好，我是 <span class="highlight">火炬</span></h1>
+            <p class="hero-description">
+                我始终相信，技术与艺术的结合可以带来无限可能。无论是开发一个高效的应用程序，还是设计一个美观的界面，我都致力于将想法转化为现实。在这里，您可以看到我的作品集、项目案例以及一些技术分享。我希望通过这些内容，与更多志同道合的人交流，共同成长。
+            </p>
+            <p class="hero-description">
+                此外，我也热衷于探索新技术和工具，持续学习是我生活的一部分。如果您对我的工作感兴趣，或者有任何合作机会，欢迎随时联系我！感谢您的访问，期待与您交流！
+            </p>
+            <button class="cta-button">了解更多</button>
+        </div>
+        <div class="hero-image">
+            <img src="images/phpto1.jpg" alt="个人照片">
+        </div>
+    </section>
+
+    <!-- 照片轮播区 -->
+    <section class="photo-carousel">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/phpto1.jpg" alt="工作场景">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/th.jpg" alt="项目展示">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/TH2.jpg" alt="生活照片">
+                </div>
+            </div>
+            <!-- 添加导航箭头 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- 添加分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 将AI对话区域改为内嵌区域 -->
+    <section id="ai-assistant" class="ai-chat-section">
+        <div class="section-header">
+            <h2>AI智能助手</h2>
+            <p>随时为您提供专业的对话服务</p>
+        </div>
+        <div class="ai-chat-container">
+            <div class="chat-header">
+                <h2>对话区域</h2>
+            </div>
+            <div class="chat-container">
+                <div id="chatMessages" class="chat-messages">
+                    <!-- 添加欢迎消息 -->
+                    <div class="message ai-message">
+                        你好！我是AI助手，有什么我可以帮你的吗？
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="userInput" 
+                            placeholder="输入您的问题..."
+                            rows="1"
+                            data-min-rows="1"
+                            maxlength="500"
+                        ></textarea>
+                        <span class="char-counter">0/500</span>
+                        <!-- 添加文件上传按钮 -->
+                        <div class="upload-btn-wrapper">
+                            <button class="upload-btn" type="button">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx,.png,.jpg,.jpeg" multiple />
+                        </div>
+                    </div>
+                    <!-- 添加文件预览区域 -->
+                    <div class="file-preview" id="filePreview"></div>
+                    <button id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 其他部分将在后续添加 -->
+    
+    <!-- 页脚区域 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- 联系信息 -->
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p><i class="fas fa-envelope"></i> Email: your.email@example.com</p>
+                <p><i class="fas fa-phone"></i> 电话: +86 123 4567 8900</p>
+                <p><i class="fas fa-map-marker-alt"></i> 地址: 城市, 省份</p>
+            </div>
+
+            <!-- 常用链接 -->
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#portfolio">作品集</a></li>
+                    <li><a href="#contact">联系</a></li>
+                </ul>
+            </div>
+
+            <!-- 社交媒体 -->
+            <div class="footer-section">
+                <h3>社交媒体</h3>
+                <div class="social-links">
+                    <!-- 添加微信二维码弹窗功能 -->
+                    <a href="javascript:void(0)" class="social-link" id="weixinLink"><i class="fab fa-weixin"></i></a>
+                    <!-- 微博链接 -->
+                    <a href="https://weibo.com/你的微博ID" target="_blank" class="social-link"><i class="fab fa-weibo"></i></a>
+                    <!-- GitHub链接 -->
+                    <a href="https://github.com/你的GitHub用户名" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <!-- Bilibili链接 -->
+                    <a href="https://space.bilibili.com/你的ID" target="_blank" class="social-link"><i class="fas fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 版权信息 -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 火炬. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 引入JS库 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
